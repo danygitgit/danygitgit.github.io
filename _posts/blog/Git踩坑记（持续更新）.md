@@ -1,3 +1,11 @@
+---
+layout: post
+title: Git踩坑记
+categories: git
+description: git命令大全
+keywords: Git
+---
+
 @[Git踩坑记](https://github.com/danygitgit/document-library/blob/master/other-library/Git%E7%AC%94%E8%AE%B0/Git%E8%B8%A9%E5%9D%91%E8%AE%B0%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89.md)
 > create by **db** on **2018-12-25 12:10:36**   
 > Recently revised in **2019-1-8 09:33:45**
