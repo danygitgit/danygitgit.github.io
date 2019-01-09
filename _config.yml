@@ -1,70 +1,134 @@
-# Welcome to Jekyll!
+# ---------------- #
+#   Main Configs   #
+# ---------------- #
+baseurl:
+url: https://danygitgit.github.io/
+date_format: "ordinal"
+title: 毛毛
+subtitle: "Wendy's Personal Blog"
+description: "Record ideas and knowledge"
+keywords: Algorithm,Machine Learning(eg.Deep Learning),Data mining
+timezone: Asia/Beijing
+encoding: "utf-8"
+side_bar_repo_limit: 5
 
-# Website settings
-title: Jalpc
-description: Jack's blog,use Jekyll and github pages.
-keywords: Jack,Jalpc,blog,Jekyll,github,gh-pages
-baseurl:  /Jalpc # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
-url: https://jarrekk.github.io/Jalpc  # url should be 'http://<github_username>.github.io/homepage' as before
-# url: http://127.0.0.1:4000
-img_path: /Jalpc/static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
+# ---------------- #
+#      Author      #
+# ---------------- #
+author: Wendy
+organization: UESTC
+organization_url: http://mmcwendy.info
+github_username: DWJWendy
+location: Chengdu, sichuan
+email: dengwenjun818@gmail.com
 
-# author -- index page "about me" section
-author:  # change following line to your infomation.
-  name: GitHub  # Be used at blog posts' author.
-  first_name: Hub  # Be used at index page about me section.
-  last_name: Git  # Be used at index page about me section.
-  avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
-  github_username: jarrekk  # Leave blank if you don't have now
-  linkedin_id: jarrekk # Leave blank if you don't have now
-  facebook_username: jiakunnj  # Leave blank if you don't have now
-  twitter_username: jiakun614  # Leave blank if you don't have now
-  email: me@jarrekk.com  # Leave blank if you don't have now
-  cv: http://cv.jarrekk.com  # An online CV can be printed as PDF, leave blank if you don't have now
-  # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
-  skill_icon1:
-    - name: icon-apache
-    - name: fa-linux
-  skill_icon2:
-    - name: fa-linux
-    - name: icon-apache
-  desc: Introduce myself will be here.  # Describe yourself.
+# ---------------- #
+#    Navigation    #
+# ---------------- #
+navs:
+  -
+    href: /
+    label: Home
 
-# comment
-disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
-  name: jalpc
 
-# analytics
-## google analytics
-ga:  # if you wanna this feature, go to https://www.google.com/analytics/ to get your configuration; if not, comment following line.
-  id: UA-93473370-3
+  -
+    href: /categories/
+    label: Blog
+   
 
-## google optimize
-go:
-  # id:
 
-## growingIO
-gio:  # if you wanna this feature, go to https://www.growingio.com/ to get your configuration; if not, comment following line.
-  # id:
+  -
+    href: /open-source/
+    label: Open-source
+   
 
-## donation
-donation: on  # type 'on'/'off' to choice display donation button at post page or not
+  -
+    href: /wiki/
+    label: Wiki
 
-## carousels
-index_carousel: on  # index page carousel switch
-blog_carousel: on  # blog page carousel switch
+  -
+    href: /links/
+    label: Link
 
-# scss
-sass:
-  style: compressed
+  -
+    href: /about/
+    label: About
 
-# Build settings
-encoding: utf-8
+# ---------------- #
+#       RSS        #
+# ---------------- #
+subscribe_rss: /feed.xml
 
-# other settings
-highlighter: rouge
+# ---------------- #
+#      Jekyll      #
+# ---------------- #
 markdown: kramdown
 kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+    input: GFM
+highlighter: rouge
+paginate: 8
+lsi: false
+quiet: false
+excerpt_separator: "\n\n"
+permalink: /:year/:month/:day/:title/
+gems:
+    - jekyll-github-metadata
+    - rouge
+#     - jekyll-html-pipeline
+    - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-feed
+    - jemoji
+#     - jekyll-mentions
+collections:
+    wiki:
+        output: true
+        permalink: /wiki/:path/
 
+repository: DWJWendy/DWJWendy.github.io
+
+# ---------------- # 
+#      Comments    #
+# ---------------- #
+# support provider: disqus, gitment, gitalk
+#comments_provider: gitalk
+comments_provider: gitalk
+
+
+# !!!重要!!! 请修改下面这些信息为你自己申请的
+# !!!Important!!! Please modify infos below to yours
+# https://disqus.com
+disqus:
+    username: wenjun d
+
+    
+# https://imsun.net/posts/gitment-introduction/
+gitment:
+    owner: DWJWendy
+    repo: blog-comments
+    oauth:
+        client_id: ef4ee0f3d879e724a46c
+        client_secret: 2a98b4739a3712bb347ed63cf50b5a07e41f4c48
+# https://github.com/gitalk/gitalk#install
+gitalk:
+    owner: DWJWendy
+    repo: blog-comments
+    clientID: ef4ee0f3d879e724a46c
+    clientSecret: 2a98b4739a3712bb347ed63cf50b5a07e41f4c48
+# 在使用其它评论组件时可点击显示 Disqus
+lazy_load_disqus : false
+
+# ---------------- #
+#    Analytics     #
+# ---------------- #
+google:
+    analytics_id: UA-80669434-1
+
+# ---------------- #
+#    Counter     #
+# ---------------- #
+#使用的是learncloud，appid和key更换成自己的
+leancloud:
+  enable: true
+  app_id: EfLTUbK2fJ0dYLAq609NQ2k4-gzGzoHsz
+  app_key: 5Agxeshbunhh9y6XQftwEvGj
