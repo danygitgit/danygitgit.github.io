@@ -1,8 +1,8 @@
 ---
 layout: page
 title: About
-description: Wendy's Personal Blog
-keywords: 毛毛虫, Wendy
+description: db's Personal Blog
+keywords: db
 comments: true
 menu: 关于
 permalink: /about/
@@ -16,7 +16,7 @@ subtitle:   <h3>Download My CV</h3>
                             
 ---
 
-我是毛毛虫_Wendy，一直努力，不断进步。
+我是db，一直努力，不断进步。
 
 等待破茧成蝶。
 
