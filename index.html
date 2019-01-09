@@ -1,59 +1,68 @@
 ---
-layout: default
-title: Jekyll Themes
+layout: blog
+title: index
+permalink: /
 ---
 
-<div class="gallery">
-	{% for post in paginator.posts %}
-		<div class="item">
-			<a class="item-inner" href="{{ post.url }}">
-				<div class="item-image"><img src="/thumbnails/{{ post.thumbnail }}"></div>
-				<div class="item-name">{{ post.title }}</div>
-			</a>
-		</div>
-	{% endfor %}
-</div>
-
-<!-- Pager -->
-
-<div class="row-fluid">
-  <div class="span12">
-    <div class="pagination">
-      <ul>
-        {% if paginator.previous_page %}
-
-          {% if paginator.previous_page == 1 %}
-            <li><a href="/">Prev</a></li>
-          {% else %}
-            <li><a href="/page{{ paginator.previous_page }}">Prev</a></li>
-          {% endif %}
-
-        {% else %}
-          <li><span class="disabled">Prev</span></li>
-        {% endif %}
-
-        {% if paginator.page == 1 %}
-          <li><span class="active">1</span></li>
-        {% else %}
-          <li><a href="/">1</a></li>
-        {% endif %}
-
-        {% for count in (2..paginator.total_pages) %}
-
-          {% if count == paginator.page %}
-            <li><span class="active">{{ count }}</span></li>
-          {% else %}
-            <li><a href="/page{{ count }}">{{ count }}</a></li>
-          {% endif %}
-        {% endfor %}
-
-        {% if paginator.next_page %}
-          <li><a href="/page{{ paginator.next_page }}">Next</a></li>
-        {% else %}
-          <li><span class="disabled">Next</span></li>
-        {% endif %}
-      </ul>
+<div class="navbar-wrapper">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">{{ site.title }}</span></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right" id="i18_navbar">
+          {% for section in site.data.landing %}
+          <li>
+            {% if section.page %}
+              <a class="page-scroll" href="{{ section.page}} ">
+            {% else %}
+              <a class="page-scroll" href="{{ section.id | prepend: '#'}} ">
+            {% endif %}
+              <span data-i18n="{{ section.i18n }}">{{ section.name }}</span>
+            </a>
+          </li>
+          {% endfor %}
+          {% for language in site.data.index.language %}
+          <li>
+            <a id="set_lang_{{ language.locale }}" class="btn btn-sm set_{{ language.locale }}" data-locale="{{ language.locale }}">
+              <img src="{{ language.flag | prepend: site.baseurl }}" height="16" width="16">
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
-  </div>
+  </nav>
 </div>
+{% if site.index_carousel %}
+{% include carousel.html %}
+{% endif %}
 
+{% for section in site.data.landing %}
+{% assign loopindex = forloop.index | modulo: 2 %}
+<section id="{{ section.id }}" class="features {% if loopindex != 1 %} gray-section {% endif %} {{ section.css }}" style="margin-top: 0;">
+  {% include sections/{{section.tpl}} %}
+</section>
+{% endfor %}
+<style>
+iframe {
+  -moz-transform: scale(0.25, 0.25);
+  -webkit-transform: scale(0.25, 0.25);
+  -o-transform: scale(0.25, 0.25);
+  -ms-transform: scale(0.25, 0.25);
+  transform: scale(0.25, 0.25);
+  -moz-transform-origin: top left;
+  -webkit-transform-origin: top left;
+  -o-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+}
+</style>
+<!-- <iframe src="https://www.maimemo.com/share/page/?uid=779139&pid=660" style="display: none;"></iframe> -->
