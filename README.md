@@ -1,77 +1,110 @@
-# 毛毛虫_Wendy
+# Funday -- 个人简历模板
 
-我的个人博客：<http://mmcwendy.info>，欢迎 Star 和 Fork。
+<a href='http://gitee.com/xiaodan_yu/resume.io/stargazers'><img src='http://gitee.com/xiaodan_yu/resume.io/badge/star.svg?theme=dark' alt='star'></img></a>
+<a href='http://gitee.com/xiaodan_yu/resume.io/members'><img src='http://gitee.com/xiaodan_yu/resume.io/badge/fork.svg?theme=dark' alt='fork'></img></a>
 
-## 概览
+## 名字释义
 
-<!-- vim-markdown-toc GFM -->
+<strong>Funday</strong>，是星期八，开心Day的意思。以前很多玩笑都是说要等星期八才能实现，OK，Then it happened now!
 
-* [效果预览](#效果预览)
-* [Fork 指南](#fork-指南)
-* [经验与思考](#经验与思考)
-* [致谢](#致谢)
+希望每个人在使用了Funday之后在找工作的时候都是处在星期八，开开心心，快快乐乐，轻轻松松拿到心仪的多金的Offer！
 
-<!-- vim-markdown-toc -->
+## 使用方法
 
-## 效果预览
+1. 修改`_config.yml`文件中的内容
 
-**[在线预览 &rarr;](http://mmcwendy.info)**
+```
+# 个人名称或昵称
+name: Dany
+# 页面个人头像信息中地址展示信息
+location: 上海
+<!-- # 页面个人头像信息中公司展示信息
+company: IBM -->
+# 页面个人头像信息中职位展示信息
+position: 前端开发工程师
+# 页面个人头像信息中GITHUB展示信息
+github: https://github.com/XXXX
+# 页面个人头像信息中Facebook展示信息
+facebook: https://www.facebook.com/XXXX
+# 页面个人头像信息中电话展示信息
+phone: 1580424XXXX
+# 页面个人头像信息中EMAIL展示信息
+email: xxxx@xxx.com
 
-![screenshot home](http://mmcwendy.info/assets/images/screenshots/home.png)
+#本项目的baseurl
+baseurl: "/resume.io"
+```
 
-## Fork 指南
+2. 修改个人头像信息
 
-Fork 本项目之后，还需要做一些事情才能让你的页面「正确」跑起来。
+	修改 `_config.yml` 文件中内容
 
-1. 正确设置项目名称与分支。
+3. 修改基本信息
+ 
+	修改 `_includes/resumer_01-basic.html` 文件中内容
 
-   按照 GitHub Pages 的规定，名称为 `username.github.io` 的项目的 master 分支，或者其它名称的项目的 gh-pages 分支可以自动生成 GitHub Pages 页面。
+4. 修改职业技能
 
-2. 修改域名。
+    修改 `_includes/resumer_02-profetional.html` 文件中内容
 
-   如果你需要绑定自己的域名，那么修改 CNAME 文件的内容；如果不需要绑定自己的域名，那么删掉 CNAME 文件。本人在 https://sg.godaddy.com 上购买的域名，第一次用，仅仅在CNAME添加了自己购买的域名，但是实际上还需要解析域名。详见[域名解析][5]
+5. 修改教育经历
 
-3. 修改配置。
+    修改 `_includes/resumer_03-education.html` 文件中内容
 
-   网站的配置基本都集中在 \_config.yml 文件中，将其中与个人信息相关的部分替换成你自己的，比如网站的 url、title、subtitle 和第三方评论模块的配置等。
+6. 修改工作经历
 
-   **评论模块：** 目前支持 disqus、gitment 和 gitalk，选用其中一种就可以了，推荐使用 gitment。它们各自的配置指南链接在 \_config.yml 文件的 Comments 一节里都贴出来了，搭建过程
-[参见资料][6]
+    修改 `_includes/resumer_04-experience.html` 文件中内容
 
-   **注意：** 如果使用 disqus，因为 disqus 处理用户名与域名白名单的策略存在缺陷，请一定将 disqus.username 修改成你自己的，否则请将该字段留空。我对该缺陷的记录见 [Issues#2][3]。
+7. 修改获得证书
 
-4. 删除我的文章与图片。
+	修改 `_includes/resumer_05-certification.html` 文件中内容
 
-   如下文件夹中除了 template.md 文件外，都可以全部删除，然后添加你自己的内容。
+8. 修改个人作品
 
-   * \_posts 文件夹中是我已发布的博客文章。
-   * \_drafts 文件夹中是我尚未发布的博客文章。
-   * \_wiki 文件夹中是我已发布的 wiki 页面。
-   * images 文件夹中是我的文章和页面里使用的图片。
+	修改 `_includes/resumer_06-personal_project.html` 文件中内容
 
-5. 修改「关于」页面。
 
-   pages/about.md 文件内容对应网站的「关于」页面，里面的内容多为个人相关，将它们替换成你自己的信息，包括 \_data 目录下的 skills.yml 和 social.yml 文件里的数据。
+## 本地搭建
 
-6. 增加博客阅读统计功能。
-   使用的是leancloud，参照的[博客来源][7]
-## 经验与思考
+在本地安装[Jekyll](https://jekyllrb.com/).
+然后在项目目录执行`jekyll s`命令,如下
 
-* 因为偶然的机会知道github page可以自己建立博客，也很幸运的找到了很多 [模板][4]，github资源真是太丰富了。
-* 虽然有很好的模板，但是很多东西还是需要自己的理解，了解最基本的原理，避免走弯路。
-* 好好利用这些资源，记录知识，必定受益无穷。
+```bash
+[root@localhost ~]# jekyll s
+Configuration file: C:/..../resume.io/_config.yml
+            Source: C:/..../resume.io
+       Destination: C:/..../resume.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 0.371 seconds.
+  Please add the following to your Gemfile to avoid polling for changes:
+    gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+ Auto-regeneration: enabled for 'C:/..../resume.io'
+    Server address: http://127.0.0.1:4000/resume.io/
+  Server running... press ctrl-c to stop.
+```
 
-## 致谢
+然后可以访问[http://127.0.0.1:4000/resume.io/](http://127.0.0.1:4000/resume.io/)来访问本地的服务了。
 
-本博客外观
-基于 [DONGChuan](http://dongchuan.github.io) 
-基于 [Zhuang Ma](http://mazhuang.org/)
-修改，非常感谢！
 
-[1]: https://github.com/mzlogin/chinese-copywriting-guidelines
-[2]: https://help.github.com/articles/setting-up-your-pages-site-locally-with-jekyll/
-[3]: https://github.com/mzlogin/mzlogin.github.io/issues/2
-[4]: http://jekyllthemes.org/
-[5]: https://www.zhihu.com/question/31377141
-[6]: https://imsun.net/posts/gitment-introduction/
-[7]: http://blog.csdn.net/u013553529/article/details/63357382
+## 在线预览
+
+[非你莫属--个人简历模板](http://xiaodan_yu.gitee.io/resume.io)
+
+## 截图预览
+
+![01.png](http://xiaodan_yu.gitee.io/resume.io/snapshot/11_01.png)
+
+![02.png](http://xiaodan_yu.gitee.io/resume.io/snapshot/11_02.png)
+
+![03.png](http://xiaodan_yu.gitee.io/resume.io/snapshot/11_03.png)
+
+![04.png](http://xiaodan_yu.gitee.io/resume.io/snapshot/11_04.png)
+
+
+## 参考
+
+本简历模板基于[Certy](http://sc.chinaz.com/moban/170307198220.htm)修改而来。保留了所有的样式，基于Jekyll重构了页面框架，并去掉了一些没有必要的内容，整合一页简历。
+
+## 开源协议
+[MIT](https://gitee.com/xiaodan_yu/resume.io/blob/master/LICENSE)
