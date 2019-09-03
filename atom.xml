@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://danygitgit.github.io/"/>
-  <updated>2019-07-20T11:40:38.914Z</updated>
+  <updated>2019-09-03T08:01:22.322Z</updated>
   <id>https://danygitgit.github.io/</id>
   
   <author>
@@ -17,39 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>JS之大循环</title>
-    <link href="https://danygitgit.github.io/2019/07/19/js-zhi-da-xun-huan/"/>
-    <id>https://danygitgit.github.io/2019/07/19/js-zhi-da-xun-huan/</id>
-    <published>2019-07-19T12:27:19.000Z</published>
-    <updated>2019-07-20T11:40:38.914Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;@&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="javaScript" scheme="https://danygitgit.github.io/categories/javaScript/"/>
-    
-    
-      <category term="javaScript" scheme="https://danygitgit.github.io/tags/javaScript/"/>
-    
-      <category term="循环" scheme="https://danygitgit.github.io/tags/%E5%BE%AA%E7%8E%AF/"/>
-    
-  </entry>
-  
-  <entry>
     <title>常用正则表达式集锦</title>
-    <link href="https://danygitgit.github.io/2019/07/18/chang-yong-zheng-ze-biao-da-shi-ji-jin/"/>
-    <id>https://danygitgit.github.io/2019/07/18/chang-yong-zheng-ze-biao-da-shi-ji-jin/</id>
-    <published>2019-07-18T06:02:55.000Z</published>
-    <updated>2019-07-20T11:45:58.830Z</updated>
+    <link href="https://danygitgit.github.io/2019/09/01/chang-yong-zheng-ze-biao-da-shi-ji-jin/"/>
+    <id>https://danygitgit.github.io/2019/09/01/chang-yong-zheng-ze-biao-da-shi-ji-jin/</id>
+    <published>2019-09-01T06:02:55.000Z</published>
+    <updated>2019-09-03T08:01:22.322Z</updated>
     
     <summary type="html">
     
@@ -75,11 +47,11 @@
   </entry>
   
   <entry>
-    <title>Less的正确打开方式</title>
-    <link href="https://danygitgit.github.io/2019/07/17/less-de-zheng-que-da-kai-fang-shi/"/>
-    <id>https://danygitgit.github.io/2019/07/17/less-de-zheng-que-da-kai-fang-shi/</id>
-    <published>2019-07-17T06:02:55.000Z</published>
-    <updated>2019-07-20T11:48:18.693Z</updated>
+    <title>键盘快捷键笔记</title>
+    <link href="https://danygitgit.github.io/2019/08/26/jian-pan-kuai-jie-jian-bi-ji/"/>
+    <id>https://danygitgit.github.io/2019/08/26/jian-pan-kuai-jie-jian-bi-ji/</id>
+    <published>2019-08-26T06:02:55.000Z</published>
+    <updated>2019-09-03T08:01:22.353Z</updated>
     
     <summary type="html">
     
@@ -93,21 +65,83 @@
     
     </summary>
     
-      <category term="Less" scheme="https://danygitgit.github.io/categories/Less/"/>
+      <category term="快捷键" scheme="https://danygitgit.github.io/categories/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     
     
-      <category term="Less" scheme="https://danygitgit.github.io/tags/Less/"/>
+      <category term="快捷键" scheme="https://danygitgit.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     
-      <category term="CSS" scheme="https://danygitgit.github.io/tags/CSS/"/>
+      <category term="效率" scheme="https://danygitgit.github.io/tags/%E6%95%88%E7%8E%87/"/>
     
   </entry>
   
   <entry>
-    <title>Vue项目实战（一）——ToDoList</title>
-    <link href="https://danygitgit.github.io/2019/07/16/vue-xiang-mu-shi-zhan-yi-todolist/"/>
-    <id>https://danygitgit.github.io/2019/07/16/vue-xiang-mu-shi-zhan-yi-todolist/</id>
-    <published>2019-07-16T06:02:55.000Z</published>
-    <updated>2019-07-20T12:38:40.824Z</updated>
+    <title>浏览器本地存储漫谈</title>
+    <link href="https://danygitgit.github.io/2019/08/20/liu-lan-qi-ben-di-cun-chu-man-tan/"/>
+    <id>https://danygitgit.github.io/2019/08/20/liu-lan-qi-ben-di-cun-chu-man-tan/</id>
+    <published>2019-08-20T14:04:20.000Z</published>
+    <updated>2019-09-03T08:01:22.335Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;@&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="vue" scheme="https://danygitgit.github.io/categories/vue/"/>
+    
+    
+      <category term="浏览器" scheme="https://danygitgit.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+      <category term="Cookie" scheme="https://danygitgit.github.io/tags/Cookie/"/>
+    
+      <category term="localStorage" scheme="https://danygitgit.github.io/tags/localStorage/"/>
+    
+      <category term="SessionStorage" scheme="https://danygitgit.github.io/tags/SessionStorage/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>命令行笔记</title>
+    <link href="https://danygitgit.github.io/2019/08/14/ming-ling-xing-bi-ji/"/>
+    <id>https://danygitgit.github.io/2019/08/14/ming-ling-xing-bi-ji/</id>
+    <published>2019-08-14T06:02:55.000Z</published>
+    <updated>2019-09-03T08:01:22.315Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;@&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="命令行" scheme="https://danygitgit.github.io/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
+    
+    
+      <category term="效率" scheme="https://danygitgit.github.io/tags/%E6%95%88%E7%8E%87/"/>
+    
+      <category term="命令行" scheme="https://danygitgit.github.io/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
+    
+      <category term="cmd" scheme="https://danygitgit.github.io/tags/cmd/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue小白课（一）——CLI搭建项目（Vue2.x）</title>
+    <link href="https://danygitgit.github.io/2019/08/08/qian-tan-vue-zu-jian-tong-xin/"/>
+    <id>https://danygitgit.github.io/2019/08/08/qian-tan-vue-zu-jian-tong-xin/</id>
+    <published>2019-08-08T06:02:55.000Z</published>
+    <updated>2019-09-03T08:01:22.331Z</updated>
     
     <summary type="html">
     
@@ -131,11 +165,95 @@
   </entry>
   
   <entry>
+    <title>Vue项目实战（一）——ToDoList</title>
+    <link href="https://danygitgit.github.io/2019/08/02/vue-xiang-mu-shi-zhan-yi-todolist/"/>
+    <id>https://danygitgit.github.io/2019/08/02/vue-xiang-mu-shi-zhan-yi-todolist/</id>
+    <published>2019-08-02T06:02:55.000Z</published>
+    <updated>2019-09-03T08:01:22.288Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;@&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="vue" scheme="https://danygitgit.github.io/categories/vue/"/>
+    
+    
+      <category term="Vue" scheme="https://danygitgit.github.io/tags/Vue/"/>
+    
+      <category term="VueCLI" scheme="https://danygitgit.github.io/tags/VueCLI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>玩转GitHub</title>
+    <link href="https://danygitgit.github.io/2019/07/27/wan-zhuan-github/"/>
+    <id>https://danygitgit.github.io/2019/07/27/wan-zhuan-github/</id>
+    <published>2019-07-27T12:27:19.000Z</published>
+    <updated>2019-09-03T08:01:22.347Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;@&lt;a href=&quot;https://github.com/danygitgit/document-library/blob/master/other-library/Git%E7%AC%94%E8%AE%B0/%E7%8E%A9%E8%BD%ACGitHub.md&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="javaScript" scheme="https://danygitgit.github.io/categories/javaScript/"/>
+    
+    
+      <category term="GitHub" scheme="https://danygitgit.github.io/tags/GitHub/"/>
+    
+      <category term="版本管理" scheme="https://danygitgit.github.io/tags/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>探秘Promise</title>
+    <link href="https://danygitgit.github.io/2019/07/25/tan-mi-promise/"/>
+    <id>https://danygitgit.github.io/2019/07/25/tan-mi-promise/</id>
+    <published>2019-07-25T12:27:19.000Z</published>
+    <updated>2019-09-03T08:01:22.327Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;@&lt;a href=&quot;https://github.com/danygitgit/document-library/blob/master/JavaScript-library/ES6/%E6%8E%A2%E7%A7%98Promise.md&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="javaScript" scheme="https://danygitgit.github.io/categories/javaScript/"/>
+    
+    
+      <category term="ES6" scheme="https://danygitgit.github.io/tags/ES6/"/>
+    
+      <category term="Pomise" scheme="https://danygitgit.github.io/tags/Pomise/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Vue小白课（四）——项目结构解析（Vue3.x）</title>
-    <link href="https://danygitgit.github.io/2019/07/15/vue-xiao-bai-ke-si-xiang-mu-jie-gou-jie-xi-vue3.x/"/>
-    <id>https://danygitgit.github.io/2019/07/15/vue-xiao-bai-ke-si-xiang-mu-jie-gou-jie-xi-vue3.x/</id>
-    <published>2019-07-15T06:02:55.000Z</published>
-    <updated>2019-07-20T12:29:11.502Z</updated>
+    <link href="https://danygitgit.github.io/2019/07/24/vue-xiao-bai-ke-si-xiang-mu-jie-gou-jie-xi-vue3.x/"/>
+    <id>https://danygitgit.github.io/2019/07/24/vue-xiao-bai-ke-si-xiang-mu-jie-gou-jie-xi-vue3.x/</id>
+    <published>2019-07-24T06:02:55.000Z</published>
+    <updated>2019-09-03T08:01:22.282Z</updated>
     
     <summary type="html">
     
@@ -160,10 +278,10 @@
   
   <entry>
     <title>Vue小白课（三）——CLI搭建项目（Vue3.x）</title>
-    <link href="https://danygitgit.github.io/2019/07/14/vue-xiao-bai-ke-san-cli-da-jian-xiang-mu-vue3.x/"/>
-    <id>https://danygitgit.github.io/2019/07/14/vue-xiao-bai-ke-san-cli-da-jian-xiang-mu-vue3.x/</id>
-    <published>2019-07-14T06:02:55.000Z</published>
-    <updated>2019-07-20T12:19:15.797Z</updated>
+    <link href="https://danygitgit.github.io/2019/07/23/vue-xiao-bai-ke-san-cli-da-jian-xiang-mu-vue3.x/"/>
+    <id>https://danygitgit.github.io/2019/07/23/vue-xiao-bai-ke-san-cli-da-jian-xiang-mu-vue3.x/</id>
+    <published>2019-07-23T06:02:55.000Z</published>
+    <updated>2019-09-03T08:01:22.270Z</updated>
     
     <summary type="html">
     
@@ -188,10 +306,10 @@
   
   <entry>
     <title>Vue小白课（二）——项目结构解析（Vue2.x）</title>
-    <link href="https://danygitgit.github.io/2019/07/13/vue-xiao-bai-ke-er-xiang-mu-jie-gou-jie-xi-vue2.x/"/>
-    <id>https://danygitgit.github.io/2019/07/13/vue-xiao-bai-ke-er-xiang-mu-jie-gou-jie-xi-vue2.x/</id>
-    <published>2019-07-13T06:02:55.000Z</published>
-    <updated>2019-07-20T11:53:25.440Z</updated>
+    <link href="https://danygitgit.github.io/2019/07/22/vue-xiao-bai-ke-er-xiang-mu-jie-gou-jie-xi-vue2.x/"/>
+    <id>https://danygitgit.github.io/2019/07/22/vue-xiao-bai-ke-er-xiang-mu-jie-gou-jie-xi-vue2.x/</id>
+    <published>2019-07-22T06:02:55.000Z</published>
+    <updated>2019-09-03T08:01:22.276Z</updated>
     
     <summary type="html">
     
@@ -216,10 +334,10 @@
   
   <entry>
     <title>Vue小白课（一）——CLI搭建项目（Vue2.x）</title>
-    <link href="https://danygitgit.github.io/2019/07/12/vue-xiao-bai-ke-yi-cli-da-jian-xiang-mu-vue2.x/"/>
-    <id>https://danygitgit.github.io/2019/07/12/vue-xiao-bai-ke-yi-cli-da-jian-xiang-mu-vue2.x/</id>
-    <published>2019-07-12T06:02:55.000Z</published>
-    <updated>2019-07-20T12:19:33.880Z</updated>
+    <link href="https://danygitgit.github.io/2019/07/21/vue-xiao-bai-ke-yi-cli-da-jian-xiang-mu-vue2.x/"/>
+    <id>https://danygitgit.github.io/2019/07/21/vue-xiao-bai-ke-yi-cli-da-jian-xiang-mu-vue2.x/</id>
+    <published>2019-07-21T06:02:55.000Z</published>
+    <updated>2019-09-03T08:01:22.253Z</updated>
     
     <summary type="html">
     
@@ -243,11 +361,67 @@
   </entry>
   
   <entry>
+    <title>Git踩坑记</title>
+    <link href="https://danygitgit.github.io/2019/07/19/git-cai-keng-ji-chi-xu-geng-xin/"/>
+    <id>https://danygitgit.github.io/2019/07/19/git-cai-keng-ji-chi-xu-geng-xin/</id>
+    <published>2019-07-19T12:27:19.000Z</published>
+    <updated>2019-09-03T08:01:22.197Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;@&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Git" scheme="https://danygitgit.github.io/categories/Git/"/>
+    
+    
+      <category term="Git" scheme="https://danygitgit.github.io/tags/Git/"/>
+    
+      <category term="GitHub" scheme="https://danygitgit.github.io/tags/GitHub/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git笔记</title>
+    <link href="https://danygitgit.github.io/2019/07/11/git-ming-ling-ru-men/"/>
+    <id>https://danygitgit.github.io/2019/07/11/git-ming-ling-ru-men/</id>
+    <published>2019-07-11T12:27:19.000Z</published>
+    <updated>2019-09-03T08:01:22.181Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;@&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Git" scheme="https://danygitgit.github.io/categories/Git/"/>
+    
+    
+      <category term="Git" scheme="https://danygitgit.github.io/tags/Git/"/>
+    
+      <category term="版本管理" scheme="https://danygitgit.github.io/tags/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
-    <link href="https://danygitgit.github.io/2019/07/01/hello-world/"/>
-    <id>https://danygitgit.github.io/2019/07/01/hello-world/</id>
-    <published>2019-07-01T15:27:19.000Z</published>
-    <updated>2019-07-20T11:41:32.340Z</updated>
+    <link href="https://danygitgit.github.io/2019/07/03/hello-world/"/>
+    <id>https://danygitgit.github.io/2019/07/03/hello-world/</id>
+    <published>2019-07-03T15:27:19.000Z</published>
+    <updated>2019-09-03T08:01:22.309Z</updated>
     
     <summary type="html">
     
@@ -265,6 +439,92 @@
     
     
       <category term="Hello World" scheme="https://danygitgit.github.io/tags/Hello-World/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS之大循环</title>
+    <link href="https://danygitgit.github.io/2019/06/25/js-zhi-da-xun-huan/"/>
+    <id>https://danygitgit.github.io/2019/06/25/js-zhi-da-xun-huan/</id>
+    <published>2019-06-25T12:27:19.000Z</published>
+    <updated>2019-09-03T08:01:22.227Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;@&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="javaScript" scheme="https://danygitgit.github.io/categories/javaScript/"/>
+    
+    
+      <category term="javaScript" scheme="https://danygitgit.github.io/tags/javaScript/"/>
+    
+      <category term="循环" scheme="https://danygitgit.github.io/tags/%E5%BE%AA%E7%8E%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Less的正确打开方式</title>
+    <link href="https://danygitgit.github.io/2019/06/17/less-de-zheng-que-da-kai-fang-shi/"/>
+    <id>https://danygitgit.github.io/2019/06/17/less-de-zheng-que-da-kai-fang-shi/</id>
+    <published>2019-06-17T06:02:55.000Z</published>
+    <updated>2019-09-03T08:01:22.233Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;@&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Less" scheme="https://danygitgit.github.io/categories/Less/"/>
+    
+    
+      <category term="Less" scheme="https://danygitgit.github.io/tags/Less/"/>
+    
+      <category term="CSS" scheme="https://danygitgit.github.io/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MAC地址和IP地址的区别与联系</title>
+    <link href="https://danygitgit.github.io/2019/06/09/mac-di-zhi-he-ip-di-zhi-de-qu-bie-yu-lian-xi/"/>
+    <id>https://danygitgit.github.io/2019/06/09/mac-di-zhi-he-ip-di-zhi-de-qu-bie-yu-lian-xi/</id>
+    <published>2019-06-09T13:59:05.000Z</published>
+    <updated>2019-09-03T08:01:22.237Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;@[MAC地址和IP地址的区别与联系（计算机网络篇）]&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;create by &lt;strong&gt;db&lt;/strong&gt; on &lt;strong&gt;2018-12-30 15:42:36&lt;/strong&gt;&lt;br&gt;Recently
+        
+      
+    
+    </summary>
+    
+      <category term="Promise" scheme="https://danygitgit.github.io/categories/Promise/"/>
+    
+    
+      <category term="MAC" scheme="https://danygitgit.github.io/tags/MAC/"/>
+    
+      <category term="IP" scheme="https://danygitgit.github.io/tags/IP/"/>
     
   </entry>
   

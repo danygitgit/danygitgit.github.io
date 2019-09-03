@@ -1,0 +1,1012 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="命令行笔记, 豆包君">
+    <meta name="description" content="@命令行笔记
+
+create by db on 2018-12-30 15:42:36Recently revised in 2018-12-31 03:42:31
+
+&amp;emsp;Hello 小伙伴们，如果觉得本文还不错，麻烦点个赞或者给个">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>命令行笔记 | 豆包君</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">豆包君</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>日志</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">豆包君</div>
+        <div class="logo-desc">
+            
+                In me the tiger sniffs the rose.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                日志
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/danygitgit/hexo_Blog" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #000;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/danygitgit/hexo_Blog" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        命令行笔记
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/效率/" target="_blank">
+                                <span class="chip bg-color">效率</span>
+                            </a>
+                        
+                            <a href="/tags/命令行/" target="_blank">
+                                <span class="chip bg-color">命令行</span>
+                            </a>
+                        
+                            <a href="/tags/cmd/" target="_blank">
+                                <span class="chip bg-color">cmd</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/命令行/" class="post-category" target="_blank">
+                                命令行
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-08-14
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        5.3k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        20 分
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>@<a href="https://github.com/danygitgit/document-library/blob/master/other-library/%E9%94%AE%E7%9B%98%E5%BF%AB%E6%8D%B7%E9%94%AE%E7%AC%94%E8%AE%B0.md" target="_blank" rel="noopener">命令行笔记</a></p>
+<blockquote>
+<p>create by <strong>db</strong> on <strong>2018-12-30 15:42:36</strong><br>Recently revised in <strong>2018-12-31 03:42:31</strong></p>
+</blockquote>
+<p>&emsp;<strong>Hello 小伙伴们，如果觉得本文还不错，麻烦点个赞或者给个 star，你们的赞和 star 是我前进的动力！<a href="https://github.com/danygitgit/document-library/blob/master/other-library/%E9%94%AE%E7%9B%98%E5%BF%AB%E6%8D%B7%E9%94%AE%E7%AC%94%E8%AE%B0.md" target="_blank" rel="noopener">GitHub 地址</a></strong></p>
+<p>&emsp;最近在网易云课堂看了米斯特吴老师讲的关于命令行的课程，写下这篇学习笔记，以记录自己的学习心得。现分享给大家，以供参考。</p>
+<p>&emsp;如果大家有兴趣，可以戳这里观看原视频：<a href="https://study.163.com/course/courseMain.htm?courseId=1005224008" target="_blank" rel="noopener">提高办公效率必学的键盘操作技巧</a></p>
+<p>&emsp;作为一只菜鸟，这是我掘金分享的第三篇文章。如有不足，还请多多指教，谢谢大家。</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="关于键盘"><a href="#关于键盘" class="headerlink" title="关于键盘"></a>关于键盘</h2><p>&emsp;什么是键盘？————我就不啰嗦了。马上9012了，也许你没见过猪跑，但估计不会没敲过键盘。</p>
+<p>&emsp;当然，如果你非要问个究竟，那我只能说：</p>
+<h3 id="这——就是键盘！"><a href="#这——就是键盘！" class="headerlink" title="这——就是键盘！"></a><strong>这——就是键盘！</strong></h3><p><img src="../public-repertory/img/keyboard-img/Varmilo.png" alt></p>
+<p>————有木有流口水呢~~反正我在流……</p>
+<ol>
+<li>Mac系统下使用的是termainal是命令行运行工具</li>
+<li>Windows系统下使用的cmd是命令行工具<br>问题：两者之前的命令不通用，所以需要统一（powershell）</li>
+</ol>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="命令一览"><a href="#命令一览" class="headerlink" title="命令一览"></a>命令一览</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>英文全称</th>
+<th>功能</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>pwd</strong></td>
+<td>Print Working Directory</td>
+<td>显示指定路径上所有文件或目录的信息</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>cd</strong></td>
+<td>Change Directory</td>
+<td>更改目录</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ls</strong></td>
+<td>List</td>
+<td>列出当前路径下的内容</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>mkdir</strong></td>
+<td>Make Directory</td>
+<td>新建文件夹</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>open</strong></td>
+<td>open</td>
+<td>打开文件</td>
+<td>只能在Mac使用</td>
+</tr>
+<tr>
+<td><strong>touch</strong></td>
+<td></td>
+<td>新建文件</td>
+<td>只能在Mac使用</td>
+</tr>
+<tr>
+<td><strong>mv</strong></td>
+<td>move</td>
+<td>移动/重命名文件</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>rm</strong></td>
+<td>remove</td>
+<td>删除文件</td>
+<td>直接删除，不会放入回收站</td>
+</tr>
+</tbody></table>
+<h2 id="命令详解"><a href="#命令详解" class="headerlink" title="命令详解"></a>命令详解</h2><h3 id="dir"><a href="#dir" class="headerlink" title=" dir "></a><font color="red"> dir </font></h3><ul>
+<li>显示指定路径上所有文件或目录的信息</li>
+</ul>
+<p>它的格式为”dir [盘符：][路径][文件名] [参数]”，<br>比如<br><code>DIR E:\FF.M3U</code><br>| 参数   | 功能                                              |<br>| —— | ————————————————- |<br>| 无参数 | ：查看当前所在目录 的文件和文件夹。               |<br>| /s     | ：查看当前目录已经其所有子目录的文件和文件夹。    |<br>| /a     | ：查看包括隐含文件的所有文件。                    |<br>| /ah    | ：只显示出隐含文件。                              |<br>| /w     | ：以紧凑方式（一行显示5个文件）显示文件和文件夹。 |<br>| /p     | ：以分页方式（显示一页之后会自动暂停）显示。      |<br>more：前面那个符号是“\”上面的那个，叫做重定向符号，就是把一个<br>命令的结果输出为另外一个命令的参数。more也是一个命令，dir /w |more<br>得到的结果和dir /w /p的结果是一样的。<br>dir&gt;a.txt   新建文件<br>第一种方法：<br>echo veryhuo.com &gt; A.txt 重定向输出，此时创建文本文件A.txt;<br>echo veryhuo.com &gt;&gt;A.txt 向A.txt文件中追加信息…..; </p>
+<p>第二种方法：<br>copy con A.txt 创建A.txt文本文件;<br>veryhuo.com　　　　　 输入内容;<br>　　　 按CTRL+Z键，之后再回车； </p>
+<p>第三种方法：<br>edit A.txt 编辑A.txt文本文件，调用command.com中创建文本文件的命令，<br>如果A.txt文件不存在，则创建文件<br>. 输入内容，保存。<br>其他的参数大家可以用：dir/?查看。</p>
+<h3 id="md"><a href="#md" class="headerlink" title="md"></a><font color="red">md</font></h3><ul>
+<li>(mkdir)–建立目录</li>
+</ul>
+<p>它的格式为”md [盘符][路径]”，<br>例如<code>md TEMP</code></p>
+<h3 id="rd"><a href="#rd" class="headerlink" title="rd"></a><font color="red">rd</font></h3><ul>
+<li>(rmdir)–删除目录<br>格式为”RD [盘符][路径]”。<br>注意：该命令只能删除空目录，并且不能删除当前目录。<h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a><font color="red">cd</font></h3></li>
+<li>进入指定目录<br>格式为” CD [路径]”<br>例如<code>CD HAPPY</code><br>注意：只能进入当前盘符中的目录。其中”CD&quot;为回到根目录，”CD..”为回到上一层目录。<h3 id="copy"><a href="#copy" class="headerlink" title="copy"></a><font color="red">copy</font></h3></li>
+<li>copy–拷贝文件<br>格式为”COPY [源目录或文件] [目的目录或文件]”，<br>比如<code>COPY C:\*.COM D:\</code><br>注意：使用该命令进行文件拷贝时，目的目录一定要存在。<h3 id="del"><a href="#del" class="headerlink" title="del"></a><font color="red">del</font></h3></li>
+<li>删除文件<br>格式为”DEL [盘符][路径][文件名] [参数]”，<br>比如<code>DEL C:\DATA\*.BAK</code>。<br>它有一个参数：”/P”，可以使用户在删除多个文件时对每个文件都显示删除询问<h3 id="ren"><a href="#ren" class="headerlink" title="ren"></a><font color="red">ren</font></h3></li>
+<li>–改名<br>格式为”REN [原名] [现名]”，7.0以后版本的DOS都支持对文件名和目录名的修改，而以前的DOS只能修改文件名。<h3 id="type"><a href="#type" class="headerlink" title="type"></a><font color="red">type</font></h3></li>
+<li>显示文本文件<br>格式为”TYPE [文件名]”，能对文本文件进行查看。</li>
+</ul>
+<p>1)    discopy–磁盘复制<br>[功能] 复制出一个和原来磁盘内容一模一样的磁盘<br>[格式] diskcopy　源驱动器名　目的驱动器名<br>[说明] 它的主要用途就是用来备份。<br>    1)     deltree–删除目录树<br>[格式] [C:][path]DELTREE [C1:][path1] [[C2:][path2] […]]<br>[说明] 这个命令将整个指定目录树全部消灭，而不管它是否是只读、隐藏与否。<br>    1)  mem–查看你的计算机内存有多少，以及内存的使用情况。<br>[格式] mem</p>
+<p> 12) chkdsk–检查你的磁盘的使用情况。<br>[格式] chkdsk　磁盘名<br>[说明] 例如要检查A盘使用情况，就输入chkdsk　A: ，检查c盘使用情况，就输入chkdsk　C: ，如果直接输入chkdsk，就检查当前磁盘的使用情况。<br>    13) sys–传递系统文件命令。将DOS的两个隐含的系统IO.SYS和MSDOS.SYS传送到目标磁盘的特定位置上，并将COMMAND.COM文件复制过去。完成后，目标盘成为DOS的启动盘。<br>[格式] [C:][path]SYS [C1:][path] d2:<br>[说明] 由于这几个文件需要复制到特定位置上，所以用COPY命令完成的复制未必能够启动机器。能过SYS命令，DOS可以将目标盘已占据特定位置的文件移动，并将系统文件复制到相应位置上。参数C1:path用来指明系统文件所在目录。如不指明，则缺省为当前盘的当前目录。所以这个命令一般要在源盘的根目录进行。<br>14) pass–设定DOS寻找.COM、.EXE、.BAT文件的所在目录<br>[格式] path=[[drive:]path[;…]]或path<br>[说明] 只打path没有参数时，只显示环境变量内容。有参数时，重新设置path变量。在没有指定path环境变量时，用户发出的命令，DOS首先判断其是否为内部命令，再查找当前目录中是否有主文件名是该命令的可执行文件，如果均不是，则显示信息“Bad command or filename”。如果发出了指定路径的命令，则在指定径中依次查找，仍找不到则出现上述提示。<br>          15) cls–清除显示器屏幕上的内容，使DOS提示符到屏幕左上角。<br>[格式] cls<br>16) time–显示和设置DOS的系统时间<br>[格式] time [hh[:mm[:ss[.cc]]]<br>17) date–显示和设置DOS的系统日期<br>[格式] date [MM-DD-YY]<br>18) ver–显示正在运行的DOS系统版本号<br>[格式] ver<br>三、DOS的外部命令<br>DOS的外部命令就是一些应用程序，能够使用户的操作更加方便和深入。这些外部命令都是以文件的形式存在，Windows系统的DOS外部命令保存在Windwos主目录下的”Command”目录中。下面这些是常用的一些DOS外部命令。<br>1）FORMAT（Format.COM）–格式化命令<br>FORMAT命令可以完成对软盘和硬盘的格式化操作<br>格式为”FORMAT [盘符] [参数]”，例如：”FORMAT A: /S”。<br>它有两个常见的参数：</p>
+<p>   /Q：进行快速格式化；<br>   /S：完成格式化，并将系统引导文件拷贝到该磁盘。</p>
+<p>   注意：该命令会清除目的磁盘上的所有数据，一定要小心使用。如果进行了普通的格式化，那磁盘上的数据还有可能恢复，但如果加上了”/Q”，那要恢复就比蹬天还难了。<br>2）  EDIT（Edit.COM）–编辑命令<br>其实它就是一个文本编辑软件，使用它可以在DOS下方便地对文本文件进行编辑，格式为”EDIT [文件名] [参数]”。<br>3）  SYS（Sys.COM）–系统引导文件传输命令<br>它能够将IO.SYS等几个文件传输到目的磁盘，使其可以引导、启动。<br>格式为”SYS [盘符]”<br>4）  ATTRIB（Attrib.EXE）–文件属性设置命令<br>通过该命令，我们可以对文件进行属性的查看和更改。<br>格式为”ATTRIB [路径][文件名] [参数]”，如果不加参数则为显示文件属性。<br>它的参数有”+？”和”-？”两种，”？”代表属性代号，这些代号有：”H”隐藏；”S”系统；”R”只读，”+”表示赋予，”-“表示去除。<br>5）  XCOPY（Xcopy.EXE）–拷贝命令<br>该命令在”COPY”的基础上进行了加强，能够对多个子目录进行拷贝。它的参数比较多，但是最常用的是”/S”，它可以对一个目录下属的多个子目录进行拷贝，另外”/E”可以拷贝空目录。<br>格式为”XCOPY [源路径][源目录/文件名] [目的目录/文件名] [参数]”。<br>6）  SCANDISK（Scandisk.EXE）–磁盘扫描程序<br>这个命令在实际的操作中有很大的用处，它能对磁盘进行扫描并修复，能够解决大部分的磁盘文件损坏问题。格式为”SCANDISK [盘符：] [参数]”下面是它的几个参数：</p>
+<p>/fragment ［驱动器名:\路径\文件名］：使用这个参数可以显示文件是否包含有间断的块，我们可以通过运行磁盘整理程序来解决这个问题；<br>/all：检查并修复所有的本地驱动器；<br>/autofix：自动修复错误，即在修复时不会出现提示；<br>/checkonly：仅仅检查磁盘，并不修复错误；<br>/custom：根据Scandisk.ini文件的内容来运行Scandisk，Scandisk.ini是一个文本文件，它包含了对Scandisk程序的设置，其中的［custom］块是在加上”/custom”参数后才执行的，用户可以根据自己的不同情况来进行不同的设置；<br>/nosave：在检查出有丢失簇后直接删除，并不转化为文件；<br>/nosummary：不显示检查概要，完成检查后将直接退出程序；<br>/surface：在完成初步检查后进行磁盘表面扫描；<br>/mono：以单色形式运行Scandisk。</p>
+<p>我们可以根据不同的情况来加上不同的参数。我们可以执行”scandisk /all /checkonly /nosave /nosummary”来完成对磁盘的检查并且自动退出，另外还可以编辑scandisk.ini文件中设置，再运行”scandisk /custom”。如果被损坏的文件比较多，我们可以使用”/autofix”来进行自动修复，不然会忙死你的。<br>7）  CHKDSK（Chkdsk.EXE）–磁盘检查命令<br>它会检查磁盘，并会显示一个磁盘状态报告。格式为”CHKDSK [盘符：] [参数]”，最常用的参数是”/F”，可以对文件错误进行修复。<br>8）  MOVE（Move.EXE）–文件移动命令<br>使用它可以对文件进行移动。<br>格式为”MOVE [源文件] [目的路径]”。<br>9）  DELTREE（Deltree.EXE）–删除命令<br>DELTREE是DEL命令的超级加强版，它不仅可以删除文件，并且会将指定目录和其下的所有文件和子目录一并删掉。使用它，我们可以很方便的对目录进行彻底的删除。<br>格式”DELTREE [文件/路径] [参数]”，<br>参数有一个”/Y”，使用时系统会对每个文件进行询问，回答”Y”后才删除。</p>
+<p>10) FDISK（Fdisk.EXE）–分区命令<br>更多的DOS命令<br>命令    功能    命令    功能<br>ctty    改变控制设备    attrib    设置文件属性<br>emm386　　    扩展内存管理    defrag    磁盘碎片整理<br>fdisk    硬盘分区    doskey    　调用和建立DOS宏命令<br>lh/loadhigh    将程序装入高端内存    debug    程序调试命令<br>move    移动文件，改目录名    fc　    文件比较<br>prompt　    设置提示符    more    分屏显示<br>smartdrv    设置磁盘加速器    set    设置环境变量<br>subst    路径替换    setver    设置版本<br>xcopy 　　　    拷贝目录和文件    vol    　显示指定的磁盘卷标<br>大家如果感兴趣的话，不妨自己在DOS窗口中打打这些命令试试</p>
+<p>四、关于网络的常用命令 </p>
+<ol>
+<li>ping<br>ping 主机ip或名字：向目标主机发送4个icmp数据包，测试对方主机是否收<br>到并响应，一般常用于做普通网络是否通畅的测试。但是ping不同不代表网<br>络不通，有可能是目标主机装有防火墙并且阻止了icmp响应。<br>ping -t ：不停的发送数据包。当然都很小，不能称作攻击。有些人自己写<br>了一些类似于ping命令的程序，不停的发送很大的数据包，以阻塞目标主机<br>的网络连接。 </li>
+</ol>
+<ol start="2">
+<li><p>net<br>这个命令是网络命令中最重要的一个，必须透彻掌握它的每一个子命令的用法，因为它的功能实在是太强大了　在这里，我们重点掌握几个常用的子命令。<br>net view<br>使用此命令查看远程主机的所有共享资源。命令格式为net view \IP。<br>net use<br>把远程主机的某个共享资源影射为本地盘符，图形界面方便使用。命令格式为net use x: \IP\sharename。上面一个表示把192.168.0.5IP的共享名为magic的目录影射为本地的Z盘。下面表示和192.168.0.7建立IPC$连接（net use $”&gt;\IP\IPC$ “password” /user:”name”），<br>建立了IPC$连接后，呵呵，就可以上传文件了：copy nc.exe $”&gt;\192.168.0.7\admin$，表示把本地目录下的nc.exe传到远程主机，结合后面要介绍到的其他DOS命令就可以实现入侵了。<br>net start<br>使用它来启动远程主机上的服务。当你和远程主机建立连接后，如果发现它的什么服务没有启动，而你又想利用此服务怎么办？就使用这个命令来启动吧。用法：net start servername，如图9，成功启动了telnet服务。<br>net stop<br>入侵后发现远程主机的某个服务碍手碍脚，怎么办？利用这个命令停掉就ok了，用法和net start同。<br>net user<br>查看和帐户有关的情况，包括新建帐户、删除帐户、查看特定帐户、激活帐户、帐户禁用等。这对我们入侵是很有利的，最重要的，它为我们克隆帐户提供了前提。键入不带参数的net user，可以查看所有用户，包括已经禁用的。下面分别讲解。<br>1，net user abcd 1234 /add，新建一个用户名为abcd，密码为1234的帐户，默认为user组成员。<br>2，net user abcd /del，将用户名为abcd的用户删除。<br>3，net user abcd /active:no，将用户名为abcd的用户禁用。<br>4，net user abcd /active:yes，激活用户名为abcd的用户。<br>5，net user abcd，查看用户名为abcd的用户的情况<br>net localgroup　查看所有和用户组有关的信息和进行相关操作。键入不带参数的net localgroup即列出当前所有的用户组。在入侵过程中，我们一般利用它来把某个帐户提升为administrator组帐户，这样我们利用这个帐户就可以控制整个远程主机了。<br>net time<br>这个命令可以查看远程主机当前的时间。如果你的目标只是进入到远程主机里面，那么也许就用不到这个命令了。但简单的入侵成功了，难道只是看看吗？我们需要进一步渗透。这就连远程主机当前的时间都需要知道，因为利用时间和其他手段（后面会讲到）可以实现某个命令和程序的定时启动，为我们进一步入侵打好基础。用法：net time \IP。</p>
+</li>
+<li><p>netstat<br>netstat 主机：查看主机当前的tcp/ip连接状态，如端口的状态。 </p>
+</li>
+<li><p>nbtstat<br>nbtstat 主机：查看主机使用的NetBIOS name。 </p>
+</li>
+<li><p>tracert<br>tracert 主机：查看从你自己到目标逐机到底经过了那些路径。如：<br>tracert <a href="http://www.ncie.gov.cn" target="_blank" rel="noopener">www.ncie.gov.cn</a> 然后等待。。。就会看到你经过的一个个路由节<br>点，一般大一点的路由器，如电信的主干路由，除了ip以外，都有英文标示<br>的。 </p>
+</li>
+<li><p>pathping<br>pathping 主机：类似tracert，但可以显示一些tracert不能显示出来的信<br>息。可以自己试试。 </p>
+</li>
+<li><p>ftp<br>字符方式的ftp，我喜欢用；）不用装cuteftp了。 </p>
+</li>
+<li><p>telnet<br>字符方式的远程登录程序，是网络人员极其爱用的远程登录程序。我最近常<br>用来调试邮件服务器。 </p>
+</li>
+<li><p>ipconfig<br>非常有用的网络配置、排错。。。命令。<br>不加参数显示当前机器的网络接口状态。<br>/all 先是详细的信息。<br>/release 释放当前ip。<br>/renew 重新申请ip。<br>/flushdns 刷新dns缓存。<br>/registerdns 重新栽dns服务器上注册自己。<br>。。。。。。 </p>
+</li>
+<li><p>arp 操作当前的arp缓存。 </p>
+</li>
+</ol>
+<p>-a 显示arp缓存。<br>-d 删除一条缓存纪录。<br>-s 田家一条缓存纪录。 </p>
+<ol start="11">
+<li>nslookup 排除dns错误的利器。是一个交互的工具。使用之前请先努力弄清楚dns的作用以及dns的工作原理。 </li>
+</ol>
+<p>xcopy是一个外部命令，也就是说，是一个小程序，有的时候会发现软盘上没有，硬盘上也没有。。。昏倒。。。当然勇气来使比copy好用，我喜欢加/e参数。<br>smartdrv.exe 加载磁盘缓存，参数是缓存的大小，单位是kb。<br>如：smartdrv 32768 就是加载32M的缓存。<br>缓存的作用在你安装WIN2K的时候非常明显！不加缓存装WIN2K PRO要3小时左右，加载8M缓存后，只要30分钟。<br>原理是在内存中划分出一块区域，在安装期间不断地把硬盘上的数据读取到那块缓存区域中，充分利用了内存。 </p>
+<p>AT和任务计划作用一样。<br>以下是使用方法，可以通过在命令提示符下面输入：AT /?获得帮助。 </p>
+<p>AT 命令安排在特定日期和时间运行命令和程序。<br>要使用 AT 命令，计划服务必须已在运行中。 </p>
+<pre><code>AT [\\computername] [ [id] [/DELETE] | /DELETE [/YES]] 
+AT [\\computername] time [/INTERACTIVE] 
+[ /EVERY:date[,...] | /NEXT:date[,...]] &quot;command&quot; 
+
+\\computername 指定远程计算机。 如果省略这个参数，会计划在本地计算机上运行命令。 
+\\127.0.0.1代表本机。和不加这个参数意思一样。 
+
+id 指定给已计划命令的识别号。 
+用来识别任务，比如你要添加好几个任务，ID=1就代表第一个喽！ 
+
+/delete 删除某个已计划的命令。如果省略 id， 
+计算机上所有已计划的命令都会被删除。 
+/yes 不需要进一步确认时，跟删除所有作业 
+的命令一起使用。 
+time 指定运行命令的时间。 
+/interactive 允许作业在运行时，与当时登录的用户 
+桌面进行交互。 
+/every:date[,...] 每个月或每个星期在指定的日期运行命令。 
+如果省略日期，则默认为在每月的本日运行。 
+/next:date[,...] 指定在下一个指定日期(如，下周四)运行命令。 
+如果省略日期，则默认为在每月的本日运行。 
+&quot;command&quot; 准备运行的 Windows NT 命令或批处理程序。
+
+## 附加小技巧
+
+自定义系统程序快捷键；
+&gt; 开始 → 程序 → 属性 → 快捷键
+
+PPT设置撤销次数：
+&gt; 文件 → 选项 → 高级 → 设置最多可取消次数`150`次
+
+word设置自动保存时间：
+&gt; 文件 → 选项 → 保存 → 设置保存自动回复信息时间间隔`1`分钟
+
+# 总结 
+
+&amp;emsp;键盘敲得好，对象找得早。这样不用多久，你就会升职加薪、当上总经理、出任CEO、迎娶白富美、走上人生巅峰，想想是不是还有点小激动呢？
+
+&amp;emsp;不扯淡了，练盲打去喽……
+
+**后记：Hello 小伙伴们，如果觉得本文还不错，记得点个赞或者给个 star，你们的赞和 star 是我编写更多更丰富文章的动力！[GitHub 地址](https://github.com/danygitgit/document-library/blob/master/other-library/Git%E7%AC%94%E8%AE%B0/Git%E5%91%BD%E4%BB%A4%E5%85%A5%E9%97%A8.md)**
+
+&gt; &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;&lt;img alt=&quot;知识共享许可协议&quot; style=&quot;border-width:0&quot; src=&quot;https://user-gold-cdn.xitu.io/2018/12/23/167d9537f3e29c99?w=88&amp;h=31&amp;f=png&amp;s=1888&quot; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;a xmlns:dct=&quot;http://purl.org/dc/terms/&quot; property=&quot;dct:title&quot;&gt;**db** 的文档库&lt;/a&gt; 由 &lt;a xmlns:cc=&quot;http://creativecommons.org/ns#&quot; href=&quot;db&quot; property=&quot;cc:attributionName&quot; rel=&quot;cc:attributionURL&quot;&gt;db&lt;/a&gt; 采用 &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议&lt;/a&gt;进行许可。&lt;br /&gt;基于&lt;a xmlns:dct=&quot;http://purl.org/dc/terms/&quot; href=&quot;https://github.com/danygitgit&quot; rel=&quot;dct:source&quot;&gt;https://github.com/danygitgit&lt;/a&gt;上的作品创作。&lt;br /&gt;本许可协议授权之外的使用权限可以从 &lt;a xmlns:cc=&quot;http://creativecommons.org/ns#&quot; href=&quot;https://creativecommons.org/licenses/by-nc-sa/2.5/cn/&quot; rel=&quot;cc:morePermissions&quot;&gt;https://creativecommons.org/licenses/by-nc-sa/2.5/cn/&lt;/a&gt; 处获得。</code></pre>
+            </div>
+            <hr/>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>转载规则</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                    <img alt=""
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+                </a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">
+                    《命令行笔记》
+                </span> 由
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/14/ming-ling-xing-bi-ji/" property="cc:attributionName"
+               rel="cc:attributionURL">
+                db
+            </a> 采用
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                知识共享署名 4.0 国际许可协议
+            </a>进行许可。
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2019/08/20/liu-lan-qi-ben-di-cun-chu-man-tan/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="浏览器本地存储漫谈">
+                        
+                        <span class="card-title">浏览器本地存储漫谈</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            作为一个前端码农，每天都在跟浏览器打交道，大家有对浏览器的数据存储方案有多少了解呢？
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-20
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/vue/" class="post-category" target="_blank">
+                                    vue
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/浏览器/" target="_blank">
+                        <span class="chip bg-color">浏览器</span>
+                    </a>
+                    
+                    <a href="/tags/Cookie/" target="_blank">
+                        <span class="chip bg-color">Cookie</span>
+                    </a>
+                    
+                    <a href="/tags/localStorage/" target="_blank">
+                        <span class="chip bg-color">localStorage</span>
+                    </a>
+                    
+                    <a href="/tags/SessionStorage/" target="_blank">
+                        <span class="chip bg-color">SessionStorage</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/08/08/qian-tan-vue-zu-jian-tong-xin/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Vue小白课（一）——CLI搭建项目（Vue2.x）">
+                        
+                        <span class="card-title">Vue小白课（一）——CLI搭建项目（Vue2.x）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            vue-cli作为Vue的脚手架工具，集成了webpack环境及主要依赖，只需要几分钟的时间就可以运行起来一个项目。对于项目的搭建、打包、维护管理等都非常方便快捷。此笔记旨在帮助Vue小白了解并应用Vue2.0项目搭建过程，希望能帮得到大家。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/vue/" class="post-category" target="_blank">
+                                    vue
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Vue/" target="_blank">
+                        <span class="chip bg-color">Vue</span>
+                    </a>
+                    
+                    <a href="/tags/VueCLI/" target="_blank">
+                        <span class="chip bg-color">VueCLI</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由&copy;<a href="https://github.com/danygitgit" target="_blank">db</a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 的
+            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建.
+
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">43.2k</span>
+            
+
+            
+			
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <!-- <div class="col s12 m4 l4 social-link social-statis">
+<div class="container row center-align col s12 m8 l8 social-link">
+    <!-- <a href="https://github.com/danygitgit" class="tooltipped" target="_blank" data-tooltip="GitHub"
+        data-position="top" data-delay="50" data-tooltip-id="ee9a890e-dab7-e157-6ef4-63ce33e72842">
+        <i class="fa fa-github"></i>
+    </a> -->
+    <!-- <a href="https://space.bilibili.com/7076447/#/" class="tooltipped" target="_blank" data-tooltip="BiliBili"
+        data-position="top" data-delay="50" data-tooltip-id="866993db-40a2-efda-d2b6-206ed133ce35">
+        <i class="fa fa-viadeo"></i>
+    </a> -->
+    <!-- <a href="https://www.jianshu.com/u/3d7dfd3e540f" class="tooltipped" target="_blank" data-tooltip="我的简书"
+        data-position="top" data-delay="50" data-tooltip-id="98f514cc-9a0e-4d7b-b757-497a571f0543">
+        <i class="fa fa-bookmark"></i>
+    </a> -->
+    <!-- <a href="https://www.zhihu.com/people/xu-qiang-69-64/activities" class="tooltipped" target="_blank"
+        data-tooltip="我的知乎" data-position="top" data-delay="50" data-tooltip-id="9ebf2365-c751-50e5-0cc4-7364368f3312">
+        <i class="fa fa-balance-scale"></i>
+    </a> -->
+    <!-- <a href="https://mblog.xq99.me/about/#!" class="tooltipped" data-tooltip="邮件:xq773939719@gmail.com"
+        data-position="top" data-delay="50" data-tooltip-id="3f995637-72e4-271b-15ec-fa9e09ac5e34">
+        <i class="fa fa-envelope-open"></i>
+    </a> -->
+    <!-- <a href="https://mblog.xq99.me/about/#!" class="tooltipped" data-tooltip="QQ:773939719" data-position="top"
+        data-delay="50" data-tooltip-id="468c2747-be7e-0631-751d-38e9166d26b5">
+        <i class="fa fa-qq"></i>
+    </a> -->
+    
+        <a href="https://github.com/danygitgit" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+            <i class="fa fa-github"></i>
+        </a>
+    
+    
+    <a href="https://github.com/danygitgit" class="tooltipped" data-tooltip="微信:xq773939719" data-position="top"
+        data-delay="50" data-tooltip-id="dad2f9c0-5244-b790-2750-d6b9275759d9">
+        <i class="fa fa-wechat"></i>
+    </a>
+    <a href="https://juejin.im/user/5b1a3eb7f265da6e572b3ada" class="tooltipped" target="_blank" data-tooltip="掘金" data-position="top" data-delay="50" data-tooltip-id="9ebf2365-c751-50e5-0cc4-7364368f3312">
+        <i class="fa fa-balance-scale"></i>
+    </a>
+
+    
+        <a href="mailto:741790002@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+            <i class="fa fa-envelope-open"></i>
+        </a>
+    
+    
+    
+        <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=741790002" class="tooltipped" data-tooltip="QQ联系我: 741790002" data-position="top" data-delay="50">
+            <i class="fa fa-qq"></i>
+        </a>
+        
+    
+    
+    <!-- 
+        <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+            <i class="fa fa-rss"></i>
+        </a>
+     -->
+    <!-- <a href="https://mblog.xq99.me/about/#!" class="tooltipped" data-tooltip="Twitter:xq773939719" data-position="top"
+        data-delay="50" data-tooltip-id="2bce542d-060b-8c83-0d2e-cb16001497ea">
+        <i class="fa fa-twitter"></i>
+    </a> -->
+    <!-- <a href="https://mblog.xq99.me/about/#!" class="tooltipped" data-tooltip="Tumblr:cleergo" data-position="top"
+        data-delay="50" data-tooltip-id="a359c463-f0a2-c467-0e49-34c08614e8b4">
+        <i class="fa fa-tumblr"></i>
+    </a> -->
+    <!-- <a href="https://mblog.xq99.me/about/#!" class="tooltipped" data-tooltip="Slack:xq773939719" data-position="top"
+        data-delay="50" data-tooltip-id="cf34b4af-b4ba-1866-a475-a7f664868c1d">
+        <i class="fa fa-slack"></i>
+    </a> -->
+    <!-- <a href="https://mblog.xq99.me/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS" data-position="top"
+        data-delay="50" data-tooltip-id="bf0046ef-855f-fd76-6115-ef4a0d8aa36c"><i class="fa fa-rss"></i>
+    </a> -->
+
+    <!-- <a href="https://github.com/blinkfox/hexo-theme-matery" class="tooltipped" target="_blank"
+        data-tooltip="基于Hexo+Matery创建" data-position="top" data-delay="50"
+        data-tooltip-id="093187cc-240f-351e-aeae-d98c23d12390">
+        <i class="fa fa-link"></i>
+    </a> -->
+
+</div></div> -->
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacityDefault":0.8,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

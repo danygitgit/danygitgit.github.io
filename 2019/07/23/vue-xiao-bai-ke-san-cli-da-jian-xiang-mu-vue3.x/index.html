@@ -1,0 +1,960 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Vue小白课（三）——CLI搭建项目（Vue3.x）, 豆包君">
+    <meta name="description" content="@Vue-CLI3搭建项目
+
+create by db on 2019-1-10 16:28:10Recently revised in 2019-3-12 15:59:45
+
+&amp;emsp;Hello 小伙伴们，如果觉得本文还不错，麻烦点个">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Vue小白课（三）——CLI搭建项目（Vue3.x） | 豆包君</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">豆包君</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>日志</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">豆包君</div>
+        <div class="logo-desc">
+            
+                In me the tiger sniffs the rose.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                日志
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/danygitgit/hexo_Blog" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #000;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/danygitgit/hexo_Blog" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        Vue小白课（三）——CLI搭建项目（Vue3.x）
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Vue/" target="_blank">
+                                <span class="chip bg-color">Vue</span>
+                            </a>
+                        
+                            <a href="/tags/VueCLI/" target="_blank">
+                                <span class="chip bg-color">VueCLI</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/vue/" class="post-category" target="_blank">
+                                vue
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-07-23
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        2.2k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        8 分
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>@<a href="https://github.com/danygitgit/document-library/blob/master/JavaScript-library/Vue/Vue%E5%B0%8F%E7%99%BD%E8%AF%BE%EF%BC%88%E4%B8%89%EF%BC%89%E2%80%94%E2%80%94CLI%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%EF%BC%88Vue3.X%EF%BC%89.md" target="_blank" rel="noopener">Vue-CLI3搭建项目</a></p>
+<blockquote>
+<p>create by <strong>db</strong> on <strong>2019-1-10 16:28:10</strong><br>Recently revised in <strong>2019-3-12 15:59:45</strong></p>
+</blockquote>
+<p>&emsp;<strong>Hello 小伙伴们，如果觉得本文还不错，麻烦点个赞或者给个 star，你们的赞和 star 是我前进的动力！<a href="https://github.com/danygitgit/document-library/blob/master/JavaScript-library/Vue/Vue%E5%B0%8F%E7%99%BD%E8%AF%BE%EF%BC%88%E4%B8%89%EF%BC%89%E2%80%94%E2%80%94CLI%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%EF%BC%88Vue3.x%EF%BC%89.md" target="_blank" rel="noopener">GitHub 地址</a></strong></p>
+<p>&emsp;查阅网上诸多资料，并结合自己的学习经验，写下这篇Vue3.0学习笔记，现分享给大家，以供参考。</p>
+<p>&emsp;作为一只前端菜鸟，本篇文章旨在记录自己的学习心得，如有不足，还请多多指教，谢谢大家。</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;Vue-CLI 是 vue 官方团队推出的一款快速开发 vue 项目的构建东西，具有开箱即用并且供给简练的自定义配备等功用。包括三个组件：</p>
+<ul>
+<li><strong>CLI</strong>：@vue/cli 全局安装的 npm 包，提供了终端里的vue命令（如：vue create 、vue serve 、vue ui 等命令）</li>
+<li><strong>CLI</strong> 服务：@vue/cli-service是一个开发环境依赖。构建于 webpack 和 webpack-dev-server 之上（提供 如：serve、build 和 inspect 命令）</li>
+<li><strong>CLI 插件</strong>：给Vue 项目提供可选功能的 npm 包 （如： Babel/TypeScript 转译、ESLint 集成、unit和 e2e测试 等）</li>
+</ul>
+<p>&emsp;Vue-CLI 3.0 正式版于 2018年8月10号发布，大神尤雨溪表示，Vue CLI 3.0与其他的版本完全不同，它经历了重构，目的是：</p>
+<ol>
+<li>尽可能减少现代前端工具在配置上的烦恼，尤其是在开发者将多个工具混合使用时；</li>
+<li>尽可能在工具链中加入最佳实践，并让其成为Vue应用程序的默认实践。</li>
+</ol>
+<p>&emsp;与Vue-CLI 2.0相比，Vue-CLI 3.0发生了很多变化。。。</p>
+<p>&emsp;一言以蔽之，就是<strong>让开发更简单！</strong></p>
+<p>&emsp;此笔记旨在帮助Vue小白了解并应用Vue3项目的命令行搭建过程，希望能帮得到大家。</p>
+<p>&emsp;参考文献：</p>
+<ul>
+<li><p><a href="https://cli.vuejs.org/" target="_blank" rel="noopener">Vue3.x官方文档</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/xuqipeter/article/details/80452271" target="_blank" rel="noopener">vue cli 3.0快速创建项目 | CSDN-徐子玉</a></p>
+</li>
+<li><p><a href="https://www.jianshu.com/p/8105d6c16d80" target="_blank" rel="noopener">利用vue-cli3快速搭建vue项目详细过程 | 简书-zhyzhyzz</a></p>
+</li>
+</ul>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="搭建Vue-CLI3-x开发环境"><a href="#搭建Vue-CLI3-x开发环境" class="headerlink" title="搭建Vue-CLI3.x开发环境"></a>搭建Vue-CLI3.x开发环境</h2><h3 id="1、更新npm到最新版本"><a href="#1、更新npm到最新版本" class="headerlink" title="1、更新npm到最新版本"></a>1、更新npm到最新版本</h3><p>&emsp;Vue CLI 3需要 nodeJs ≥ 8.9 (官方推荐 8.11.0+，你可以使用 nvm 或 nvm-windows在同一台电脑中管理多个 Node 版本）。</p>
+<p>&emsp;命令运行</p>
+<blockquote>
+<p>npm install -g npm</p>
+</blockquote>
+<p>&emsp;npm就自动为我们更新到最新版本</p>
+<p>&emsp;更新完成之后，以管理员身份打开cmd管理工具，，输入 <code>node -v</code>，回车，可查看node版本号.</p>
+<h3 id="2、安装全局Vue-CLI3-x脚手架"><a href="#2、安装全局Vue-CLI3-x脚手架" class="headerlink" title="2、安装全局Vue-CLI3.x脚手架"></a>2、安装全局Vue-CLI3.x脚手架</h3><p>&emsp;Vue-CLI是vue官方提供的一个命令行工具，可用于快速搭建大型单页应用。该工具提供开箱即用的构建工具配置，带来现代化的前端开发流程。只需一分钟即可启动带热重载、保存时静态检查以及可用于生产环境的构建配置的项目。</p>
+<p>&emsp;首先查看我们当前vue版本号，在命令行输入</p>
+<blockquote>
+<p>vue -V</p>
+</blockquote>
+<p>&emsp;如果出现<code>2.X.X</code>，则说明我们现在安装的Vue-CLI2；</p>
+<p>然后我们就需要更新升级了，命令行输入以下命令，回车；</p>
+<blockquote>
+<p>npm i -g @vue/cli</p>
+</blockquote>
+<p>&emsp;再次查看Vue的版本号<code>3.x.x</code>，则说明更新成功；</p>
+<h2 id="命令行创建Vue-CLI3项目"><a href="#命令行创建Vue-CLI3项目" class="headerlink" title="命令行创建Vue-CLI3项目"></a>命令行创建Vue-CLI3项目</h2><h3 id="1、通过Vue-CLI3创建一个vue项目"><a href="#1、通过Vue-CLI3创建一个vue项目" class="headerlink" title="1、通过Vue-CLI3创建一个vue项目"></a>1、通过Vue-CLI3创建一个vue项目</h3><p>&emsp;进入你需要创建项目的文件夹，打开命令行。</p>
+<p>输入以下命令，回车</p>
+<blockquote>
+<p><font color="red"> vue create</font> test</p>
+</blockquote>
+<p>&emsp;这里<code>test</code>指的是项目名，该命令执行后会创建一个名为<code>test</code>的目录，也就是我们所搭建的项目。</p>
+<p>此处有两个选择：</p>
+<ul>
+<li><p><code>default (babel, eslint)</code>：默认套餐，提供<code>babel</code>和<code>eslint</code>支持</p>
+</li>
+<li><p><code>Manually select features</code>：自己去选择需要的功能，提供更多的特性选择。比如如果想要支持 <code>TypeScript</code> ，就应该选择这一项。</p>
+</li>
+</ul>
+<p>&emsp;可以使用<kbd>上下方向键</kbd>来切换选项。如果只需要 <code>babel</code> 和 <code>eslint</code> 支持，那么选择第一项，就完事了，静静等待 vue 初始化项目。</p>
+<p>&emsp;Vue-CLI3 内置支持了8个功能特性，可以多选：使用<kbd>方向键</kbd>在特性选项之间切换，使用<kbd>空格键</kbd>选中当前特性，使用<kbd> a </kbd>键切换选择所有，使用<kbd> i </kbd>键翻转选项。</p>
+<p>对于每一项的功能，此处做个简单描述：</p>
+<pre><code>? Check the features needed for your project: (Press &lt;space&gt; to select, &lt;a&gt; to toggle all, &lt;i&gt; to invert selection)
+&gt;( ) Babel                           //转码器，可以将ES6代码转为ES5代码，从而在现有环境执行。                      
+ ( ) TypeScript// TypeScript是一个JavaScript（后缀.js）的超集（后缀.ts）包含并扩展了 JavaScript 的语法，需要被编译输出为 JavaScript在浏览器运行，目前较少人再用
+ ( ) Progressive Web App (PWA) Support// 渐进式Web应用程序
+ ( ) Router                           // vue-router（vue路由）
+ ( ) Vuex                             // vuex（vue的状态管理模式）
+ ( ) CSS Pre-processors               // CSS 预处理器（如：less、sass）
+ ( ) Linter / Formatter               // 代码风格检查和格式化（如：ESlint）
+ ( ) Unit Testing                     // 单元测试（unit tests）
+ ( ) E2E Testing                      // e2e（end to end） 测试</code></pre><p>我选择了 <code>Router</code>，<code>Vuex</code>，<code>CSS Pre-processors</code>，<code>Linter / Formatter</code></p>
+<p>按住<code>enter</code>进入下一步，接下来都是对之前每项选项的更详细的选择。</p>
+<ul>
+<li><p>css:选择SCSS/SASS</p>
+</li>
+<li><p>Linter / Formatter:选择prettier</p>
+</li>
+</ul>
+<p>&emsp;这一步就是要选择配置文件的位置了。对于 <code>Babel</code> 、<code>PostCSS</code> 等，都可以有自己的配置文件： <code>.babelrc</code> 、 <code>.postcssrc</code> 等等，同时也可以把配置信息放在 <code>package.json</code> 里面。此处出于对编辑器（ Visual Studio Code ）的友好支持（编辑器一般默认会在项目根目录下寻找配置文件），选择把配置文件放在外面，选择 <code>In dedicated config files</code></p>
+<p><strong>补充</strong></p>
+<p><code>Save this as a preset for future projects?</code>:这个就是问要不要把当前的这一系列选项配置保存起来，方便下一次创建项目时复用。选择y。</p>
+<p>选完之后， Vue-CLI 就根据前面选择的内容，开始初始化项目了。</p>
+<p>&emsp;最后出现如下代码</p>
+<pre><code>🎉  Successfully created project test.
+👉  Get started with the following commands:
+
+ $ cd test
+ $ npm run serve</code></pre><p>&emsp;说明已经初始化成功，Vue-CLI3已经将项目搭建完成。</p>
+<h3 id="2、进入你的项目文件夹"><a href="#2、进入你的项目文件夹" class="headerlink" title="2、进入你的项目文件夹"></a>2、进入你的项目文件夹</h3><p>&emsp;项目搭建好了，现在就可以进入项目文件夹。</p>
+<p>输入以下命令，回车进入新建的项目。</p>
+<blockquote>
+<p><font color="red">cd</font> test</p>
+</blockquote>
+<h3 id="3、通过npm在项目里安装依赖"><a href="#3、通过npm在项目里安装依赖" class="headerlink" title="3、通过npm在项目里安装依赖"></a>3、通过npm在项目里安装依赖</h3><p>&emsp;因为各个模板之间都是相互依赖的，所以现在我们要安装依赖。</p>
+<p>输入以下命令，回车安装依赖</p>
+<blockquote>
+<p><font color="red">npm install</font></p>
+</blockquote>
+<h3 id="4、启动项目"><a href="#4、启动项目" class="headerlink" title="4、启动项目"></a>4、启动项目</h3><p>&emsp;一切环境依赖安装准备就绪，我们来测试一下自己新建的vue项目的运行情况。</p>
+<p>输入以下命令，回车启动项目</p>
+<blockquote>
+<p><font color="red">npm run serve</font></p>
+</blockquote>
+<p>结果会弹出一个浏览器访问地址默认为<code>localhost:8080</code>，如下：</p>
+<pre><code> App running at:
+  - Local:   http://localhost:8080/
+  - Network: http://***.***.***.***:8080/
+
+  Note that the development build is not optimized.
+  To create a production build, run npm run build.</code></pre><p>&emsp;在浏览器中打开<code>http://localhost:8080</code>或者Network的地址，就能看到你的项目了<br><img src="/source/images/vue-cli-img/vue-cli3.png" alt></p>
+<h2 id="vue-ui-图形化界面创建项目"><a href="#vue-ui-图形化界面创建项目" class="headerlink" title="vue ui 图形化界面创建项目"></a>vue ui 图形化界面创建项目</h2><p>&emsp;Vue-CLI3.x给我们同样提供了图形化界面,用来管理和创建项目</p>
+<p>命令行输入命令</p>
+<blockquote>
+<p>vue ui</p>
+</blockquote>
+<p>然后会自动打浏览器页面：<br><img src="/source/images/vue-cli-img/vue-ui.png" alt></p>
+<p>&emsp;然后就可以按照也页面按钮一步步常见项目了。</p>
+<h2 id="项目打包"><a href="#项目打包" class="headerlink" title="项目打包"></a>项目打包</h2><p>&emsp;在开发完项目之后，就应该打包上线了。 Vue-CLI3 也提供了打包的命令，在项目根目录下执行：</p>
+<blockquote>
+<p>npm run build</p>
+</blockquote>
+<p>&emsp;执行完之后，可以看到在项目根目录下多出了一个 <code>dist</code>目录，该目录下就是打包好的所有静态资源，直接部署到静态资源服务器就好了。</p>
+<p>&emsp;实际上，在部署的时候要注意，假设静态服务器的域名是 <code>http://static.baidu.com</code> ，那么对应到访问 <code>&lt;项目根目录&gt;/dist/index.html</code> 的 URL 一定要是 <code>http://static.baidu.com/index.html</code> ，其他的静态资源以此类推。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>&emsp;至此，我们的Vue3.0项目就搭建完成了。万里长征第一步，加油！</p>
+<p>&emsp;如需进一步了解关于vue项目结构的基础知识，请戳<a href="https://github.com/danygitgit/document-library/blob/master/JavaScript-library/Vue/Vue%E5%B0%8F%E7%99%BD%E8%AF%BE%EF%BC%88%E5%9B%9B%EF%BC%89%E2%80%94%E2%80%94%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E8%A7%A3%E6%9E%90%EF%BC%88Vue3.x%EF%BC%89.md" target="_blank" rel="noopener">Vue小白课（四）——项目结构解析（Vue4.x）</a></p>
+<p>&emsp;路漫漫其修远兮，与诸君共勉。</p>
+<p><strong>后记：Hello 小伙伴们，如果觉得本文还不错，记得点个赞或者给个 star，你们的赞和 star 是我编写更多更丰富文章的动力！<a href="https://github.com/danygitgit/document-library/blob/master/JavaScript-library/Vue/Vue%E5%B0%8F%E7%99%BD%E8%AF%BE%EF%BC%88%E4%B8%89%EF%BC%89%E2%80%94%E2%80%94CLI%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%EF%BC%88Vue3.x%EF%BC%89.md" target="_blank" rel="noopener">GitHub 地址</a></strong></p>
+<blockquote>
+<p><a rel="noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="知识共享许可协议" style="border-width:0" src="https://user-gold-cdn.xitu.io/2018/12/23/167d9537f3e29c99?w=88&h=31&f=png&s=1888"></a><br><a xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><strong>db</strong> 的文档库</a> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="db" property="cc:attributionName" rel="cc:attributionURL">db</a> 采用 <a rel="noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br>基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/danygitgit" rel="noopener" target="_blank">https://github.com/danygitgit</a>上的作品创作。<br>本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="noopener" target="_blank">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。</p>
+</blockquote>
+
+            </div>
+            <hr/>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>转载规则</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                    <img alt=""
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+                </a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">
+                    《Vue小白课（三）——CLI搭建项目（Vue3.x）》
+                </span> 由
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/07/23/vue-xiao-bai-ke-san-cli-da-jian-xiang-mu-vue3.x/" property="cc:attributionName"
+               rel="cc:attributionURL">
+                db
+            </a> 采用
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                知识共享署名 4.0 国际许可协议
+            </a>进行许可。
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2019/07/24/vue-xiao-bai-ke-si-xiang-mu-jie-gou-jie-xi-vue3.x/">
+                    <div class="card-image">
+                        
+                        <img src="/source/images/vue-cli-img/vue-cli30.jpg" class="responsive-img" alt="Vue小白课（四）——项目结构解析（Vue3.x）">
+                        
+                        <span class="card-title">Vue小白课（四）——项目结构解析（Vue3.x）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            在上一篇项目搭建文章中，我们已经下载安装了node环境以及Vue-CLI3，并且已经成功构建了一个Vue-CLI3项目——见【Vue小白课（三）——CLI搭建项目（Vue3.x）】。那么接下来，我们来梳理一下Vue-CLI3项目的结构。
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-24
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/vue/" class="post-category" target="_blank">
+                                    vue
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Vue/" target="_blank">
+                        <span class="chip bg-color">Vue</span>
+                    </a>
+                    
+                    <a href="/tags/VueCLI/" target="_blank">
+                        <span class="chip bg-color">VueCLI</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/07/22/vue-xiao-bai-ke-er-xiang-mu-jie-gou-jie-xi-vue2.x/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Vue小白课（二）——项目结构解析（Vue2.x）">
+                        
+                        <span class="card-title">Vue小白课（二）——项目结构解析（Vue2.x）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            在上一篇项目搭建文章中，我们已经下载安装了node环境以及vue-cli，并且已经成功构建了一个vue-cli项目——见【Vue小白课（一）——CLI搭建项目（Vue2.x）】。那么接下来，我们来梳理一下vue-cli项目的结构。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/vue/" class="post-category" target="_blank">
+                                    vue
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Vue/" target="_blank">
+                        <span class="chip bg-color">Vue</span>
+                    </a>
+                    
+                    <a href="/tags/VueCLI/" target="_blank">
+                        <span class="chip bg-color">VueCLI</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由&copy;<a href="https://github.com/danygitgit" target="_blank">db</a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 的
+            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建.
+
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">43.2k</span>
+            
+
+            
+			
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <!-- <div class="col s12 m4 l4 social-link social-statis">
+<div class="container row center-align col s12 m8 l8 social-link">
+    <!-- <a href="https://github.com/danygitgit" class="tooltipped" target="_blank" data-tooltip="GitHub"
+        data-position="top" data-delay="50" data-tooltip-id="ee9a890e-dab7-e157-6ef4-63ce33e72842">
+        <i class="fa fa-github"></i>
+    </a> -->
+    <!-- <a href="https://space.bilibili.com/7076447/#/" class="tooltipped" target="_blank" data-tooltip="BiliBili"
+        data-position="top" data-delay="50" data-tooltip-id="866993db-40a2-efda-d2b6-206ed133ce35">
+        <i class="fa fa-viadeo"></i>
+    </a> -->
+    <!-- <a href="https://www.jianshu.com/u/3d7dfd3e540f" class="tooltipped" target="_blank" data-tooltip="我的简书"
+        data-position="top" data-delay="50" data-tooltip-id="98f514cc-9a0e-4d7b-b757-497a571f0543">
+        <i class="fa fa-bookmark"></i>
+    </a> -->
+    <!-- <a href="https://www.zhihu.com/people/xu-qiang-69-64/activities" class="tooltipped" target="_blank"
+        data-tooltip="我的知乎" data-position="top" data-delay="50" data-tooltip-id="9ebf2365-c751-50e5-0cc4-7364368f3312">
+        <i class="fa fa-balance-scale"></i>
+    </a> -->
+    <!-- <a href="https://mblog.xq99.me/about/#!" class="tooltipped" data-tooltip="邮件:xq773939719@gmail.com"
+        data-position="top" data-delay="50" data-tooltip-id="3f995637-72e4-271b-15ec-fa9e09ac5e34">
+        <i class="fa fa-envelope-open"></i>
+    </a> -->
+    <!-- <a href="https://mblog.xq99.me/about/#!" class="tooltipped" data-tooltip="QQ:773939719" data-position="top"
+        data-delay="50" data-tooltip-id="468c2747-be7e-0631-751d-38e9166d26b5">
+        <i class="fa fa-qq"></i>
+    </a> -->
+    
+        <a href="https://github.com/danygitgit" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+            <i class="fa fa-github"></i>
+        </a>
+    
+    
+    <a href="https://github.com/danygitgit" class="tooltipped" data-tooltip="微信:xq773939719" data-position="top"
+        data-delay="50" data-tooltip-id="dad2f9c0-5244-b790-2750-d6b9275759d9">
+        <i class="fa fa-wechat"></i>
+    </a>
+    <a href="https://juejin.im/user/5b1a3eb7f265da6e572b3ada" class="tooltipped" target="_blank" data-tooltip="掘金" data-position="top" data-delay="50" data-tooltip-id="9ebf2365-c751-50e5-0cc4-7364368f3312">
+        <i class="fa fa-balance-scale"></i>
+    </a>
+
+    
+        <a href="mailto:741790002@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+            <i class="fa fa-envelope-open"></i>
+        </a>
+    
+    
+    
+        <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=741790002" class="tooltipped" data-tooltip="QQ联系我: 741790002" data-position="top" data-delay="50">
+            <i class="fa fa-qq"></i>
+        </a>
+        
+    
+    
+    <!-- 
+        <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+            <i class="fa fa-rss"></i>
+        </a>
+     -->
+    <!-- <a href="https://mblog.xq99.me/about/#!" class="tooltipped" data-tooltip="Twitter:xq773939719" data-position="top"
+        data-delay="50" data-tooltip-id="2bce542d-060b-8c83-0d2e-cb16001497ea">
+        <i class="fa fa-twitter"></i>
+    </a> -->
+    <!-- <a href="https://mblog.xq99.me/about/#!" class="tooltipped" data-tooltip="Tumblr:cleergo" data-position="top"
+        data-delay="50" data-tooltip-id="a359c463-f0a2-c467-0e49-34c08614e8b4">
+        <i class="fa fa-tumblr"></i>
+    </a> -->
+    <!-- <a href="https://mblog.xq99.me/about/#!" class="tooltipped" data-tooltip="Slack:xq773939719" data-position="top"
+        data-delay="50" data-tooltip-id="cf34b4af-b4ba-1866-a475-a7f664868c1d">
+        <i class="fa fa-slack"></i>
+    </a> -->
+    <!-- <a href="https://mblog.xq99.me/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS" data-position="top"
+        data-delay="50" data-tooltip-id="bf0046ef-855f-fd76-6115-ef4a0d8aa36c"><i class="fa fa-rss"></i>
+    </a> -->
+
+    <!-- <a href="https://github.com/blinkfox/hexo-theme-matery" class="tooltipped" target="_blank"
+        data-tooltip="基于Hexo+Matery创建" data-position="top" data-delay="50"
+        data-tooltip-id="093187cc-240f-351e-aeae-d98c23d12390">
+        <i class="fa fa-link"></i>
+    </a> -->
+
+</div></div> -->
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacityDefault":0.8,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
