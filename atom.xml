@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>豆包君</title>
+  <title>Dany</title>
   
   
   <link href="/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>https://danygitgit.github.io/</id>
   
   <author>
-    <name>db</name>
+    <name>Dany</name>
     
   </author>
   
